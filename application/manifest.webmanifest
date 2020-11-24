@@ -1,0 +1,22 @@
+{
+  "short_name": "Manifset board",
+  "name": "Manifset board",
+  "description": "A place to get your manifest ready",
+  "icons": [
+    {
+      "src": "asserts/manifsetboard/manifsetboard96x96.png",
+      "type": "image/png",
+      "sizes": "96x96"
+    },
+    {
+      "src": "asserts/manifsetboard/manifsetboard144x144.png",
+      "type": "image/png",
+      "sizes": "144x144"
+    }
+  ],
+  "background_color": "#ECECEC",
+  "display": "minimal-ui",
+  "theme_color": "#ECECEC",
+  "orientation":"portrait"
+}
+
