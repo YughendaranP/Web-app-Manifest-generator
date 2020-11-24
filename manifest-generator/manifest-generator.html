@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<!-- Photos by Dave Hoefleron & Brent Cox Unsplash
+    Icons from Bootstrap-->
+<html lang="en">
+    <head>
+            <!-- charset-set -->
+            <meta charset="UTF-8">
+            <!-- icon&title -->
+            <title>Manifest board</title>
+            <link rel="icon" type="image/png" href="asserts/manifsetboard/manifsetboard32x32.png">
+            <!-- viewport -->
+            <meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0.maximum-scale=1.0,user-scalable=yes">
+            <!-- basic-data -->
+            <meta name="Description" content="A place to get your manifest ready">
+            <meta name="keywords" content="progressive web apps,progressive web application,progressive web application development,progressive web app development,progressive web app add to home screen,build a progressive web app,manifest.json download,manifest.json generator,manifest.json for pwa,manifest.json file">
+            <meta name="author" content="Yughendaran P">
+            <!-- mobile-web-app-capable -->
+            <meta name="mobile-web-app-capable" content="yes">
+            <meta name="apple-mobile-web-app-capable" content="yes">
+            <!-- status-bar-custamization -->
+            <meta name="theme-color" content="#ECECEC">
+            <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+            <meta name="msapplication-TitleColor" content="#ECECEC">
+            <!-- apple&windows-mobile-app-icon -->
+            <link rel="apple-touch-icon" href="asserts/manifsetboard/manifsetboard256x256.png">
+            <link rel="apple-touch-icon" sizes="57x57" href="asserts/manifsetboard/manifsetboard57x57.png">
+            <link rel="apple-touch-icon" sizes="72x72" href="asserts/manifsetboard/manifsetboard72x72.png">
+            <link rel="apple-touch-icon" sizes="114x114" href="asserts/manifsetboard/manifsetboard114x114.png">
+            <link rel="apple-touch-icon" sizes="144x144" href="asserts/manifsetboard/manifsetboard144x144.png">
+            <link rel="msapplication-TitleImage" href="asserts/manifsetboard/manifsetboard256x256.png">
+            <!-- startup-image -->
+            <link rel="apple-touch-startup-image" href="asserts/Start-up-image256256.png">
+            <!-- open-graph -->
+            <meta name="og_type" property="og:type" content="website"> 
+            <meta name="og_url" property="og:url" content="">
+            <meta name="og_title" property="og:title" content="Manifest board">
+            <meta name="og_site-name" property="og:site_name" content="Manifest board">
+            <meta name="og_description" property="og:description" content="A place to get your manifest ready">
+            <meta name="og-image" property="og:image" content="asserts/manifsetboard/manifsetboard256x256.png">
+            <!-- style-link -->
+            <link rel="stylesheet" type="text/css" href="style.css">
+            <!-- manifest-link -->
+            <link rel="manifest" href="application/manifest.webmanifest">
+    </head>
+    <body>
+        <div class="google-add-container">
+        </div>
+        <div class="outer-layer">
+        </div>
+        <header class="manifest-header">Web app <span>Manifest generator</span></header>
+        <div class="control-board">
+            <form action="" class="mainfest-input">
+                <br>
+                <br>
+                <label for="name">Name</label>
+                <br>
+                <br>
+                <input class="name" type="text">
+                <br>
+                <br>
+                <label for="short_name">Short_name</label>
+                <br>
+                <br>
+                <input class="short_name" type="text">
+                <br>
+                <br>
+                <label for="description">Description</label>
+                <br>
+                <br>
+                <input class="description" type="text">
+                <br>
+                <br>
+                <label for="start_url">Start_url</label>
+                <br>
+                <br>
+               <input class="start_url" type="text">
+                <br>
+                <br>
+                <label for="display">Display</label>
+                <br>
+                <br>
+                <select class="display">
+                <option value="browser">browser</option>
+                <option value="standalone">standalone</option>
+                <option value="minimal-ui">minimal-ui</option>
+                <option value="fullscreen">fullscreen</option>
+                </select>
+                <br>
+                <br>
+                <label for="orientation">orientation</label>
+                <br>
+                <br>
+                <select class="orientation">
+                <option value="any">any</option>
+                <option value="natural">natural</option>
+                <option value="portrait">Portrait</option>
+                <option value="landscape">landscape</option>
+                </select>
+                <br>
+                <br>
+                <label for="scope">Application scope</label>
+                <br>
+                <br>
+                <input class="scope" type="text">  
+                <br>
+                <br>
+                <label for="theme">Theme color</label>
+                <br>
+                <br>
+                <div class="color-container">
+                <input class="theme_color" type="color">
+                </div>
+                <br>
+                <br>
+                <label for="background">Background</label>
+                <br>
+                <br>
+                <div class="color-container">
+                <input class="background_color" type="color">
+                </div>
+                <br>
+                <br>
+                <label for="">Icon</label>
+                <br>
+                <br>
+                <div class="file" onclick=insertIcon()>
+                    Browse
+                </div>
+                <br>
+                <br>
+            </form>
+            <div spellcheck="false" class="mainfest-code">
+                <button onclick=copyToClipboard() onmousedown=progress() onmouseup=success() class="copy">
+                    <svg width="1.5rem" height="1.5rem" viewBox="0 0 16 16" class="bi bi-clipboard-check" fill="white" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1v-1z"/>
+                        <path fill-rule="evenodd" d="M9.5 1h-3a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3zm4.354 7.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7.5 9.793l2.646-2.647a.5.5 0 0 1 .708 0z"/>
+                    </svg>
+                </button>
+                <br>
+                <code class="manifest-json">
+                    <br>
+                    <br>
+                    <h1>manifest.json</h1>
+                    <br>
+                    <br>
+                    <code>
+                    {
+                        <br>
+                        <span class="keys">"name":</span><span contenteditable="true" class="values name">"My app"</span>,
+                        <br>
+                        <span class="keys">"short_name":</span><span contenteditable="true" class="values short_name">""</span>,
+                        <br>
+                        <span class="keys">"description":</span><span contenteditable="true" class="values description">""</span>,
+                        <br>
+                        <span class="keys">"start_url":</span><span contenteditable="true" class="values start_url">"/"</span>,
+                        <br>
+                        <span class="keys">"display":</span><span contenteditable="true" class="values display">"browser"</span>,
+                        <br>
+                        <span class="keys">"orientation":</span><span contenteditable="true" class="values orientation">"any"</span>,
+                        <br>
+                        <span class="keys">"scope":</span><span contenteditable="true" class="values scope">"/"</span>,
+                        <br>
+                        <span class="keys">"theme_color":</span><span contenteditable="true" class="values theme_color">""</span>,
+                        <br>
+                        <span class="keys">"background_color":</span><span contenteditable="true" class="values background_color">""</span>
+                        <br>
+                    }
+                </code>
+                </code>          
+            </div>
+        </div>
+        <div class="inner-layer">
+            <h1>Screen</h1>
+            <button onclick=shiftScreenOne() class="home-screen small-screen">
+                home screen
+            </button>
+            <div id="#screen-one" class="screen screen-one">
+                <div class="icon-container">
+                <button class="square-icon icon-shape">
+                    <!-- <p>My app</p> -->
+                </button>
+                <p>My app</p>
+                </div>
+                <div class="icon-container">
+                <button class="semi-square-icon icon-shape">
+                    <!-- <p>My app</p> -->
+                </button>
+                <p>My app</p>
+                </div>
+                <div class="icon-container">
+                <button class="circle-icon icon-shape">
+                    <!-- <p>My app</p> -->
+                </button>
+                <p>My app</p>
+                </div>
+                <div class="icon-container">
+                <button class="drop-icon icon-shape">
+                    <!-- <p>My app</p> -->
+                </button>
+                <p>My app</p>
+                </div>
+                <div class="icon-container">
+                <button class="cylinder-icon icon-shape">
+                    <!-- <p>My app</p> -->
+                </button>
+                <p>My app</p>
+                </div>
+            </div>
+            <button onclick=shiftScreenTwo() class="splash-screen small-screen">
+                splash screen
+            </button>
+            <div class="screen screen-two">
+                <div class="splash-screen-logo">
+                    <div class="inner-splash-logo">
+                    </div>
+                </div>
+                <h1 class="splah-screen-description">
+                    My app
+                </h1>
+            </div>
+            <button onclick=shiftScreenThree() class="app-screen small-screen">
+                app screen
+            </button>
+            <div class="screen screen-three">
+                <div class="standalone-box">
+                    <p>10:28</p>
+                    <svg width="1em" height="0.5rem" viewBox="0 0 16 16" class="bi bi-reception-4" fill="white" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0 11.5a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1-.5-.5v-2zm4-3a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 .5.5v5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1-.5-.5v-5zm4-3a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 .5.5v8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1-.5-.5v-8zm4-3a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 .5.5v11a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1-.5-.5v-11z"/>
+                      </svg>
+                    <svg width="1em" height="0.5rem" viewBox="0 0 16 16" class="bi bi-battery-full" fill="white" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" d="M12 5H2a1 1 0 0 0-1 1v4a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V6a1 1 0 0 0-1-1zM2 4a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2H2z"/>
+                        <path d="M2 6h10v4H2V6zm12.5 3.5a1.5 1.5 0 0 0 0-3v3z"/>
+                    </svg>
+                </div>
+                <div class="top-bar">
+                    <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-house" fill="white" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" d="M2 13.5V7h1v6.5a.5.5 0 0 0 .5.5h9a.5.5 0 0 0 .5-.5V7h1v6.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 13.5zm11-11V6l-2-2V2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5z"/>
+                        <path fill-rule="evenodd" d="M7.293 1.5a1 1 0 0 1 1.414 0l6.647 6.646a.5.5 0 0 1-.708.708L8 2.207 1.354 8.854a.5.5 0 1 1-.708-.708L7.293 1.5z"/>
+                      </svg>
+                      <div class="url-container">
+                          <p contenteditable="true"></p>
+                      </div>
+                      <div class="tab-container">
+                          1
+                      </div>
+                      <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-three-dots-vertical" fill="white" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z"/>
+                      </svg>
+                </div>
+                <div class="minimal">
+                    <p class="minimalu-url">My app
+                        <br>
+                        <span>https://www....com</span>
+                    </p>                      
+                    <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-three-dots-vertical" fill="white" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z"/>
+                    </svg>
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript" src="app.js"></script>
+    </body>
+</html>
