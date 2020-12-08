@@ -15,7 +15,7 @@
     }
   ],
   "background_color": "#ECECEC",
-  "display": "minimal-ui",
+  "display": "fullscreen",
   "theme_color": "#ECECEC",
   "orientation":"portrait"
 }
