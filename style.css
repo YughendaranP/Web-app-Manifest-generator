@@ -95,26 +95,6 @@ top:200px
 {
 top:360px
 }
-.screen::after
-{
-    position: absolute;
-    content: "";
-    width:2.5px;
-    height:2.5px;
-    background:black;
-    right:0px;
-    bottom:0px;
-}
-.google-add-container
-{
-    position: absolute;
-    width:50%;
-    height:7%;
-    top:2.5%;
-    left:25%;
-    z-index: 1;
-    overflow: hidden;
-}
 .manifest-header
 {
     position: absolute;
