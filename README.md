@@ -1,4 +1,4 @@
-# For NWoC, KWoC, SWoC
+# Manifest board
 
 ![logo](https://yughendaranp.github.io/Web-app-Manifest-generator/asserts/manifsetboard/manifsetboard256x256.png 'Manifest board')
 
